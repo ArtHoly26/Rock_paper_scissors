@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <ctime>
 #include <fstream>
 #include <string>
@@ -35,15 +35,15 @@ int main()
 	int mainChoise;
 	bool mainFlag = false;
 	bool exit = false;
-	cout << "Добро пожаловать в игру камень, ножницы, бумага!" << endl;
+	cout << "Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ РІ РёРіСЂСѓ РєР°РјРµРЅСЊ, РЅРѕР¶РЅРёС†С‹, Р±СѓРјР°РіР°!" << endl;
 	system("pause");
 	system("cls");
 	do
 	{
-		cout << "Главное меню:" << endl
-			<< "1 - Новая игра" << endl
-			<< "2 - Рекорды " << endl
-			<< "3 - Выход" << endl;
+		cout << "Р“Р»Р°РІРЅРѕРµ РјРµРЅСЋ:" << endl
+			<< "1 - РќРѕРІР°СЏ РёРіСЂР°" << endl
+			<< "2 - Р РµРєРѕСЂРґС‹ " << endl
+			<< "3 - Р’С‹С…РѕРґ" << endl;
 		cin >> mainChoise;
 		system("pause");
 		system("cls");
@@ -61,9 +61,9 @@ int main()
 				player.GetScore2();
 				system("pause");
 				system("cls");
-				cout << "1 - Продолжить" << endl
-					<<  "2 - Сохранить итоговый счет и выйти" << endl
-					<<  "3 - Выход" << endl;
+				cout << "1 - РџСЂРѕРґРѕР»Р¶РёС‚СЊ" << endl
+					<<  "2 - РЎРѕС…СЂР°РЅРёС‚СЊ РёС‚РѕРіРѕРІС‹Р№ СЃС‡РµС‚ Рё РІС‹Р№С‚Рё" << endl
+					<<  "3 - Р’С‹С…РѕРґ" << endl;
 				cin >>caseChoise;
 				if (caseChoise == 1) exit = false;
 				if (caseChoise == 2)
@@ -91,7 +91,7 @@ int main()
 			system("cls");
 			break;
 
-		default: cout << "Нажмите кнопку, чтоб вернуться в меню!!! " << endl;
+		default: cout << "РќР°Р¶РјРёС‚Рµ РєРЅРѕРїРєСѓ, С‡С‚РѕР± РІРµСЂРЅСѓС‚СЊСЃСЏ РІ РјРµРЅСЋ!!! " << endl;
 			     system("pause");
 			     system("cls");
 			     break;
@@ -105,18 +105,18 @@ void Game:: HumanChoise()
 	bool localFlag = false;
 	do
 	{
-		cout << "Ваш выбор:" << endl
-			<< "1 - Ножницы" << endl
-			<< "2 - Камень" << endl
-			<< "3 - Бумага" << endl;
+		cout << "Р’Р°С€ РІС‹Р±РѕСЂ:" << endl
+			<< "1 - РќРѕР¶РЅРёС†С‹" << endl
+			<< "2 - РљР°РјРµРЅСЊ" << endl
+			<< "3 - Р‘СѓРјР°РіР°" << endl;
 		cin >> choiseHuman;
 		
 		system("pause");
 		system("cls");
 		if (choiseHuman == 1 || choiseHuman == 2 || choiseHuman == 3) localFlag = true;
-		if (choiseHuman == 1) choiseHum = "Ножницы";
-		if (choiseHuman == 2) choiseHum = "Камень";
-		if (choiseHuman == 3) choiseHum = "Бумага";
+		if (choiseHuman == 1) choiseHum = "РќРѕР¶РЅРёС†С‹";
+		if (choiseHuman == 2) choiseHum = "РљР°РјРµРЅСЊ";
+		if (choiseHuman == 3) choiseHum = "Р‘СѓРјР°РіР°";
 	} while (!localFlag);
 }
 void Game:: RandAIChoise()
@@ -126,13 +126,13 @@ void Game:: RandAIChoise()
 	int min = 1;
 	this->choiseAI = rand() % 3 + 1;
 
-	if (choiseAI == 1) choiseAIM = "Ножницы";
-	if (choiseAI == 2) choiseAIM = "Камень";
-	if (choiseAI == 3) choiseAIM = "Бумага";
+	if (choiseAI == 1) choiseAIM = "РќРѕР¶РЅРёС†С‹";
+	if (choiseAI == 2) choiseAIM = "РљР°РјРµРЅСЊ";
+	if (choiseAI == 3) choiseAIM = "Р‘СѓРјР°РіР°";
 }
 void Game:: Result()
 {
-	cout << "Вы выбрали: " << choiseHum << "-> Компьютер выбрал: " << choiseAIM << endl;
+	cout << "Р’С‹ РІС‹Р±СЂР°Р»Рё: " << choiseHum << "-> РљРѕРјРїСЊСЋС‚РµСЂ РІС‹Р±СЂР°Р»: " << choiseAIM << endl;
 }
 void Game:: GetScore1()
 {
@@ -144,37 +144,37 @@ void Game:: GetScore2()
 }
 void Game:: Comparison()
 {
-	if (choiseAI == 1 && choiseHuman == 1) cout << "Ничья" << endl;
-	if (choiseAI == 2 && choiseHuman == 2) cout << "Ничья" << endl;
-	if (choiseAI == 3 && choiseHuman == 3) cout << "Ничья" << endl;
+	if (choiseAI == 1 && choiseHuman == 1) cout << "РќРёС‡СЊСЏ" << endl;
+	if (choiseAI == 2 && choiseHuman == 2) cout << "РќРёС‡СЊСЏ" << endl;
+	if (choiseAI == 3 && choiseHuman == 3) cout << "РќРёС‡СЊСЏ" << endl;
 	if (choiseAI == 1 && choiseHuman == 2)
 	{
-		cout << "Вы выиграли" << endl;
+		cout << "Р’С‹ РІС‹РёРіСЂР°Р»Рё" << endl;
 		Score1++;
 	}
 	if (choiseAI == 1 && choiseHuman == 3)
 	{
-		cout << "Вы проиграли" << endl;
+		cout << "Р’С‹ РїСЂРѕРёРіСЂР°Р»Рё" << endl;
 		Score2++;
 	}
 	if (choiseAI == 2 && choiseHuman == 3)
 	{
-		cout << "Вы выиграли" << endl;
+		cout << "Р’С‹ РІС‹РёРіСЂР°Р»Рё" << endl;
 		Score1++;
 	}
 	if (choiseAI == 2 && choiseHuman == 1)
 	{
-		cout << "Вы проиграли" << endl;
+		cout << "Р’С‹ РїСЂРѕРёРіСЂР°Р»Рё" << endl;
 		Score2++;
 	}
 	if (choiseAI == 3 && choiseHuman == 2)
 	{
-		cout << "Вы проиграли" << endl;
+		cout << "Р’С‹ РїСЂРѕРёРіСЂР°Р»Рё" << endl;
 		Score2++;
 	}
 	if (choiseAI == 3 && choiseHuman == 1)
 	{
-		cout << "Вы выиграли" << endl;
+		cout << "Р’С‹ РІС‹РёРіСЂР°Р»Рё" << endl;
 		Score1++;
 	}
 
@@ -191,7 +191,7 @@ void Game:: SaveResult()
 	ofstream save;
 	save.open(path, ofstream::app);
 
-	if (!save.is_open()) cout << "Ошибка записи!" << endl;
+	if (!save.is_open()) cout << "РћС€РёР±РєР° Р·Р°РїРёСЃРё!" << endl;
 
 	else
 	{
@@ -206,7 +206,7 @@ void Game:: ReadResult()
 	ifstream read;
 	read.open(path);
 
-	if (!read.is_open()) cout << "Ошибка записи!" << endl;
+	if (!read.is_open()) cout << "РћС€РёР±РєР° Р·Р°РїРёСЃРё!" << endl;
 
 	else
 	{
